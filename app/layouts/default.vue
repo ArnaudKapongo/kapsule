@@ -4,8 +4,13 @@
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
-            <NuxtLink to="/" class="text-xl font-bold text-gray-900">
-              MonSite
+            <NuxtLink to="/" class="flex items-center">
+              <img 
+                src="/kapsule.svg" 
+                alt="KAPSULE INC" 
+                class="h-16 w-auto"
+                role="img"
+              />
             </NuxtLink>
           </div>
           <div class="flex items-center space-x-4">

@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="isLoading"
-    class="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 transition-all duration-500"
+    class="fixed inset-0 z-50 flex items-center justify-center transition-all duration-500"
     :class="{ 'opacity-0 pointer-events-none': !isLoading }"
   >
     <div class="text-center">
@@ -42,12 +42,13 @@ const props = withDefaults(defineProps<Props>(), {
   progress: 0
 })
 
-// Couleur de la barre de progression qui suit le logo
+// Couleur de la barre de progression
 const progressBarColor = computed(() => {
-  if (props.progress < 20) return 'bg-blue-800'
-  if (props.progress < 40) return 'bg-blue-600'
-  if (props.progress < 60) return 'bg-blue-500'
-  if (props.progress < 80) return 'bg-sky-500'
-  return 'bg-cyan-500'
+  if (props.progress < 20) return 'bg-sky-500'
+  if (props.progress < 40) return 'bg-blue-500'
+  if (props.progress < 60) return 'bg-blue-600'
+  if (props.progress < 80) return 'bg-blue-800'
+ 
+  return 'bg-blue-800'
 })
 </script>

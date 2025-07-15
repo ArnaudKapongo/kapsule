@@ -1,5 +1,4 @@
 <!-- components/ui/KapsuleLogo.vue -->
-<!-- components/ui/KapsuleLogo.vue -->
 <template>
     <div class="flex justify-center items-center w-full max-w-xs mx-auto">
       <!-- SVG avec seulement les changements de couleur -->
