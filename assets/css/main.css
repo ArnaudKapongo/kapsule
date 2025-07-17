@@ -25,6 +25,106 @@
     .animate-color-shift {
         animation: color-shift 3s ease-in-out infinite;
     }
+
+    /* Nouvelles animations */
+    .floating-particles .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        animation: float 20s infinite linear;
+    }
+
+    .pulse-dot {
+        animation: pulse-dot 2s infinite;
+    }
+
+    .timeline-item {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: timeline-appear 0.8s ease-out forwards;
+    }
+
+    .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+    .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+    .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+    .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+    .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+
+    .solution-card {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: solution-appear 0.8s ease-out forwards;
+    }
+
+    .solution-card:nth-child(1) { animation-delay: 0.1s; }
+    .solution-card:nth-child(2) { animation-delay: 0.2s; }
+    .solution-card:nth-child(3) { animation-delay: 0.3s; }
+    .solution-card:nth-child(4) { animation-delay: 0.4s; }
+    .solution-card:nth-child(5) { animation-delay: 0.5s; }
+    .solution-card:nth-child(6) { animation-delay: 0.6s; }
+
+    /* Animations Technologies */
+    .tech-category {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: tech-category-appear 0.8s ease-out forwards;
+    }
+
+    .tech-category:nth-child(1) { animation-delay: 0.1s; }
+    .tech-category:nth-child(2) { animation-delay: 0.2s; }
+    .tech-category:nth-child(3) { animation-delay: 0.3s; }
+    .tech-category:nth-child(4) { animation-delay: 0.4s; }
+
+    .tech-item {
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: tech-item-slide 0.6s ease-out forwards;
+    }
+
+    .tech-progress {
+        width: 0% !important;
+        animation: progress-fill 2s ease-out forwards;
+    }
+
+    .stat-item {
+        opacity: 0;
+        transform: scale(0.8);
+        animation: stat-appear 0.8s ease-out forwards;
+    }
+
+    .stat-item:nth-child(1) { animation-delay: 0.2s; }
+    .stat-item:nth-child(2) { animation-delay: 0.4s; }
+    .stat-item:nth-child(3) { animation-delay: 0.6s; }
+    .stat-item:nth-child(4) { animation-delay: 0.8s; }
+
+    .contact-info-item {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: contact-info-appear 0.6s ease-out forwards;
+    }
+
+    .contact-info-item:nth-child(1) { animation-delay: 0.2s; }
+    .contact-info-item:nth-child(2) { animation-delay: 0.4s; }
+    .contact-info-item:nth-child(3) { animation-delay: 0.6s; }
+
+    /* Particules contact */
+    .contact-particles .contact-particle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        animation: contact-float 15s infinite linear;
+    }
+
+    /* Motif technique */
+    .tech-pattern {
+        background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+        background-size: 20px 20px;
+        animation: tech-pattern-move 20s linear infinite;
+    }
 }
 
 @keyframes fade-in {
@@ -73,6 +173,155 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse-dot {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+    }
+    70% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+}
+
+@keyframes timeline-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes solution-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes tech-category-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes tech-item-slide {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes progress-fill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: var(--progress-width);
+    }
+}
+
+@keyframes stat-appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes contact-info-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contact-float {
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes tech-pattern-move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20px 20px;
+    }
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Styles pour la popup de succès */
+.confetti-piece {
+    animation: confetti-fall 3s ease-out forwards;
 }
 
 @layer base {
