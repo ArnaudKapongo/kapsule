@@ -58,7 +58,7 @@ NODE_ENV=production
 bun run dev
 ```
 
-### Tester le sondage :
+### Tester le formulaire :
 1. Remplir le formulaire sur la page d'accueil
 2. Vérifier les logs console
 3. Vérifier la réception d'email
@@ -71,7 +71,7 @@ bun run dev
 ## 5. Monitoring en Production
 
 ### Métriques à surveiller :
-- Nombre de sondages reçus/jour
+- Nombre de formulaires reçus/jour
 - Taux d'erreurs
 - Tentatives de spam (rate limiting)
 - Performance des envois d'email
@@ -86,7 +86,7 @@ bun run dev
 ### Pour une montée en charge :
 1. **Redis** pour le rate limiting (au lieu de mémoire)
 2. **Queue système** pour les emails (Bull/BullMQ)
-3. **Base de données** pour stocker les sondages
+3. **Base de données** pour stocker les formulaires
 4. **Monitoring** avec Prometheus/Grafana
 5. **CDN** pour les assets statiques
 

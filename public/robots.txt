@@ -1,2 +1,20 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kapsule.fr/sitemap.xml
+
+# Optimisation crawl
+Crawl-delay: 1
+
+# Répertoires autorisés
+Allow: /about
+Allow: /privacy
+Allow: /_nuxt/
+Allow: /assets/
+
+# Fichiers spécifiques
+Allow: /favicon.ico
+Allow: /kapsule.svg
+Allow: /kapsuleOnly.svg
+Allow: /moi.jpeg
