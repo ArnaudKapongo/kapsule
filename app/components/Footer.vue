@@ -6,7 +6,7 @@
         <div class="md:col-span-2">
           <h3 class="text-xl font-bold mb-4">Kapsule</h3>
           <p class="text-gray-400 mb-6 max-w-md">
-            Expert en développement de solutions SaaS sur mesure. Transformez vos idées en applications web performantes avec un développeur qui comprend vos enjeux business.
+            Expert en développement de solutions SaaS. Transformez vos idées en applications web performantes avec un développeur qui comprend vos enjeux business.
           </p>
         </div>
         
